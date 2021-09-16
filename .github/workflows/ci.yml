@@ -21,6 +21,7 @@ jobs:
         image: debian:buster-slim
         options: -v ${{ github.workspace }}/..:/tmp/build/ 
         run: |
+          chmod +x /tmp/build/futurerestore/.github/workflows/linux.sh
           /tmp/build/futurerestore/.github/workflows/linux.sh
     - name: Linux Copy
       run: |
